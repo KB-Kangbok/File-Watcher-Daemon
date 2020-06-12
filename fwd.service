@@ -1,0 +1,11 @@
+[Unit]
+Description=File watcher daemon
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/fwd.pid
+ExecStart=/usr/sbin/fwd
+
+[Install]
+WantedBy=multi-user.target
